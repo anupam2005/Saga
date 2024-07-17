@@ -1,0 +1,45 @@
+Overview
+
+Batch Framework and Scheduler are legacy solutions to write and trigger batch jobs. This homegrown offering belongs to pre Auto-Sys era and uses java and quarts. 
+
+Auto-Sys is the recommended solution for all batch jobs. Hence, all batch jobs hosted in lending grid must make the following transition:
+
+Migrate job out of LG Batch Framework to Orchestra Batch
+
+Migrate trigger logic from scheduler to Auto-Sys
+
+Why are we doing this?
+
+While building a homegrown solution might seem appealing initially, Auto-Sys offers a more robust, scalable, and secure solution for batch scheduling needs. It reduces development overhead, improves reliability, and provides valuable features for managing and monitoring your batch jobs. This translates to increased efficiency, reduced costs, and a more future-proofed batch processing environment.
+
+Below are the tangible benefits of Auto-Sys and Orchestra migration.
+
+Reduced Development & Maintenance:
+
+Pre-Built Functionality: Auto-Sys comes with pre-built features for job scheduling, dependencies, retries, alerts, and logging. This eliminates the need for in-house development and maintenance of those functionalities in a homegrown solution.
+
+Simplified Management: Auto-Sys offers a central console for managing and monitoring all your batch jobs. This simplifies administration compared to managing custom scripts and configurations.
+
+Increased Scalability & Reliability:
+
+Enterprise-Grade Features: Auto-Sys is designed to handle large and complex batch workloads. It provides features like job queuing, prioritization, and fault tolerance, ensuring smooth operation even during peak processing times.
+
+Reduced Downtime: Auto-Sys offers built-in redundancy and disaster recovery options, minimizing downtime due to hardware or software failures.
+
+Improved Security & Visibility:
+
+Centralized Security: Auto-Sys provides role-based access control and user authentication, ensuring only authorized users can access and manage batch jobs.
+
+Enhanced Reporting & Auditing: Auto-Sys offers comprehensive job logs and reporting capabilities. This allows for easier troubleshooting, performance analysis, and improved visibility into your batch processing environment.
+
+Additional Benefits:
+
+Reduced Costs: While there's an initial investment in Auto-Sys, the reduced development and maintenance burden can lead to long-term cost savings compared to maintaining a homegrown solution.
+
+Improved Team Efficiency: Using a pre-built tool frees up your development team to focus on core business applications instead of building and maintaining in-house scheduling tools.
+
+Future-Proofing: Auto-Sys is a mature product with ongoing development and support. This ensures you have access to new features and bug fixes, keeping your batch scheduling environment up-to-date.
+
+Justification:
+
+WFT Strategic direction is to have all batch processing needs to be done with Orchestra Batch and Auto-Sys. Any isolated batch processing application such a LG Batch & Scheduler is discouraged.

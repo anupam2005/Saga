@@ -1,11 +1,20 @@
-Objective: Requesting UCD onboarding exception clearance for NEViewerUI & NEViewerService.
+LGNDM FileSystem as a Service (FSaS): Whitelist Verification Using LDAP
 
-Justification:
-We are in the process of transitioning ownership of the existing NEViewer PCF portal from AppId SAE to LGEDA due to the dissolution of the SAE development group. This is a critical change that requires swift action to ensure smooth continuity and management.
+The LGNDM FileSystem as a Service (FSaS) leverages LDAP to store and manage the whitelisted file paths. All requests to FSaS are routed through a DataPower gateway named IBUS.
 
-Additionally, these components are expected to have a short lifespan and are planned for retirement by Q2-2025. Onboarding them under UCD now will streamline their management and enable us to retire them efficiently when the time comes.
+Request Processing Flow:
 
-Given that all applications under LGEDA are already using UCD, integrating NEViewerUI and NEViewerService into this system will ensure consistency across our operations, reduce the complexity of managing different platforms, and ultimately save time and resources. This proactive approach will simplify the decommissioning process and maintain operational alignment.
+Caller Identification:
+Upon receiving a request, IBUS identifies the caller based on the provided certificate.
 
-For these reasons, we respectfully request an exception clearance to onboard these components under UCD.
+Whitelist Verification:
+After identifying the caller, IBUS checks the directories the caller is permitted to access, referencing the whitelist stored in LDAP.
 
+Response Handling:
+
+If the caller’s access is validated against the whitelist, the request is forwarded to FSaS for further processing.
+If the whitelist verification fails, IBUS immediately blocks the request and returns an error response.
+
+
+Operational Rationale for Externalizing the Whitelist:
+Storing the whitelist in LDAP provides flexibility and operational efficiency. This approach allows the team to update the whitelist dynamically, without requiring code changes or redeployments, ensuring seamless adaptability to access requirements.

@@ -27,3 +27,20 @@
 - Lots of events
 - Works well when multiple teams own the saga
 
+- -------------------------------------\\
+
+
+<dependencies>
+    <dependency>
+        <groupId>jakarta.xml.bind</groupId>
+        <artifactId>jakarta.xml.bind-api</artifactId>
+        <version>4.0.0</version> <!-- Use the latest version -->
+    </dependency>
+    <dependency>
+        <groupId>org.glassfish.jaxb</groupId>
+        <artifactId>jaxb-runtime</artifactId>
+        <version>4.0.0</version> <!-- Use the latest version -->
+    </dependency>
+</dependencies>
+
+

@@ -43,4 +43,22 @@
     </dependency>
 </dependencies>
 
+-------------------------
+
+Download the JAXB Standalone Distribution:
+
+Download the standalone JAXB implementation from the Maven repository or GitHub: JAXB GitHub Releases.
+Run the XJC Tool: After downloading, you can use the xjc tool to generate Java classes from an XSD (XML Schema Definition) file.
+
+Example command:
+
+bash
+Copy
+Edit
+xjc -d <output_directory> -p <package_name> <schema_file>.xsd
+-d: Specifies the output directory for the generated files.
+-p: Specifies the package name for the generated classes.
+<schema_file>.xsd: The XML schema file.
+Add the Generated Classes to Your Project: Copy the generated classes into your project directory and ensure they are included in your build.
+
 
